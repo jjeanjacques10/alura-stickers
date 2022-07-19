@@ -4,7 +4,7 @@ Projeto da Imersão Java da Alura.
 
 Site da Imersão: <https://www.alura.com.br/imersao-java>
 
-## Estrucura do projeto
+## Estrutura do projeto
 
 - `src`: Arquivos de código fonte
   - `movies`: Código fonte do App que chama o IMDb API
