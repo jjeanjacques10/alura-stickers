@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import stickersrefactored.exception.SearchException;
+
 public class JsonParser {
 
     private static final Pattern REGEX_ITEMS = Pattern.compile(".*\\[(.+)\\].*");
@@ -16,7 +18,7 @@ public class JsonParser {
 
         Matcher matcher = REGEX_ITEMS.matcher(json);
         if (!matcher.find()) {
-            throw new IllegalArgumentException("Nao encontrou items.");
+            throw new SearchException("Items not found");
         }
 
         String[] items = matcher.group(1).split("\\},\\{");
