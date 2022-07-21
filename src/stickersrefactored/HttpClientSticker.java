@@ -7,6 +7,8 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.net.http.HttpResponse.BodyHandlers;
 
+import stickersrefactored.exception.SearchException;
+
 public class HttpClientSticker {
 
     public String searchData(String url) {
@@ -18,7 +20,7 @@ public class HttpClientSticker {
             HttpResponse<String> response = client.send(request, BodyHandlers.ofString());
             return response.body();
         } catch (IOException | InterruptedException ex) {
-            throw new RuntimeException(ex);
+            throw new SearchException(ex.getMessage());
         }
     }
 
