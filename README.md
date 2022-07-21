@@ -9,6 +9,7 @@ Site da Imersão: <https://www.alura.com.br/imersao-java>
 - `src`: Arquivos de código fonte
   - `movies`: Código fonte do App que chama o IMDb API
   - `stickers`: Código fonte do App que gera os stickers
+  - `stikcersrefactored`: Código fonte do App que gera os stickers refatorado na aula 3
 
 ## Aula 1 - IMDb API
 
@@ -35,6 +36,12 @@ import java.net.URL;
 **Exemplo de Sticker**
 
 <img src="src\stickers\images\output\movie-file.png" width="200" alt="Sticker"/>
+
+## Aula 3 - Ligando as pontas, refatorando o código
+
+Utilizando melhores práticas de programação para o código desenvolvido na aula 2. Adicionando figurinhas da Nasa.
+
+<img src="src\stickersrefactored\images\output\The Averted Side Of The Moon.png" width="200" alt="Sticker"/>
 
 ---
 Developed by [@jjeanjacques10](https://twitter.com/jjeanjacques10)
