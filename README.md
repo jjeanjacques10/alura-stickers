@@ -35,13 +35,49 @@ import java.net.URL;
 
 **Exemplo de Sticker**
 
-<img src="src\stickers\images\output\movie-file.png" width="200" alt="Sticker"/>
+<center>
+  <img src="src\stickers\images\output\movie-file.png" width="200" alt="Sticker"/>
+</center>
 
 ## Aula 3 - Ligando as pontas, refatorando o código
 
 Utilizando melhores práticas de programação para o código desenvolvido na aula 2. Adicionando figurinhas da Nasa.
 
-<img src="src\stickersrefactored\images\output\The Averted Side Of The Moon.png" width="200" alt="Sticker"/>
+**Exemplo de Sticker NASA**
+
+<center>
+  <img src="src\stickersrefactored\images\output\The Averted Side Of The Moon.png" width="200" alt="Sticker"/>
+</center>
+
+Alteração da Classe `Content` para um `record` do Java.
+
+``` java
+public class Content {
+
+    private final String title;
+    private final String imageUrl;
+
+    public Content(String title, String imageUrl) {
+        this.title = title;
+        this.imageUrl = imageUrl;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+}
+```
+
+Nova versão como um [record](https://www.guiadojava.com.br/2021/04/java-records.html).
+
+``` java
+public record Content(String title, String imageUrl) {}
+```
 
 ---
 Developed by [@jjeanjacques10](https://twitter.com/jjeanjacques10)
