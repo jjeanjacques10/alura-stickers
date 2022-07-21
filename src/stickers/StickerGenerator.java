@@ -13,13 +13,11 @@ import javax.imageio.ImageIO;
 public class StickerGenerator {
 
     public void createFromFile(String path, String nameFile) throws IOException {
-        // Leitura da imagem
         BufferedImage image = ImageIO.read(new File(path));
         this.create(image, nameFile);
     }
 
     public void createFromUrl(String url, String nameFile) throws IOException {
-        // Leitura da imagem
         BufferedImage image = ImageIO.read(new URL(url));
         this.create(image, nameFile);
     }
@@ -39,7 +37,7 @@ public class StickerGenerator {
         // Escrever uma frase na nova imagem
         graphics.setColor(Color.GREEN);
         graphics.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 64));
-        graphics.drawString("Doutor Estranho", 100, newHeight - 100);
+        graphics.drawString(nameFile, 100, newHeight - 100);
 
         // Escreve
         ImageIO.write(newImage, "png", new File("src/stickers/images/output/" + nameFile + ".png"));

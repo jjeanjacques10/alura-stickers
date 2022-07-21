@@ -8,6 +8,7 @@ Site da Imersão: <https://www.alura.com.br/imersao-java>
 
 - `src`: Arquivos de código fonte
   - `movies`: Código fonte do App que chama o IMDb API
+  - `stickers`: Código fonte do App que gera os stickers
 
 ## Aula 1 - IMDb API
 
@@ -30,6 +31,10 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 ```
+
+**Exemplo de Sticker**
+
+<img src="src\stickers\images\output\movie-file.png" width="200" alt="Sticker"/>
 
 ---
 Developed by [@jjeanjacques10](https://twitter.com/jjeanjacques10)
