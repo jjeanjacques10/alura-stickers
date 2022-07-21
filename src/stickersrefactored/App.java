@@ -9,7 +9,7 @@ import stickersrefactored.extract.NasaContentExtractor;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=1998-10-07&end_date=1999-10-11";
+        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2021-10-07&end_date=2021-10-11";
 
         var http = new HttpClientSticker();
         String json = http.searchData(url);
@@ -25,8 +25,8 @@ public class App {
         for (int i = 0; i < 3; i++) {
             var content = contents.get(i);
             try {
-                System.out.println(content.getTitle() + " - " + content.getImageUrl());
-                stickerGenerator.createFromUrl(content.getImageUrl(), content.getTitle());
+                System.out.println(content.title() + " - " + content.imageUrl());
+                stickerGenerator.createFromUrl(content.imageUrl(), content.title());
             } catch (IOException e) {
                 e.printStackTrace();
             }
