@@ -5,19 +5,23 @@ import java.util.List;
 
 import stickersrefactored.extract.ContentExtractor;
 import stickersrefactored.extract.ImdbContentExtractor;
+import stickersrefactored.extract.LinguagensContentExtractor;
 import stickersrefactored.extract.NasaContentExtractor;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        String url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2021-10-07&end_date=2021-10-11";
+        // String url =
+        // "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2021-10-07&end_date=2021-10-11";
         // String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060";
+        String url = "http://localhost:8080/linguagems";
 
         var http = new HttpClientSticker();
         String json = http.searchData(url);
 
         // Content Extractor
         // ContentExtractor extractor = new ImdbContentExtractor(); // IMDB
-        ContentExtractor extractor = new NasaContentExtractor(); // Nasa
+        // ContentExtractor extractor = new NasaContentExtractor(); // Nasa
+        ContentExtractor extractor = new LinguagensContentExtractor(); // Linguagens
 
         List<Content> contents = extractor.extract(json);
 
