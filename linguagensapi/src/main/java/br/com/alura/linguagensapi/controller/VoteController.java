@@ -1,7 +1,7 @@
 package br.com.alura.linguagensapi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,7 +16,7 @@ public class VoteController {
     @Autowired
     private LinguagemRepository repository;
 
-    @GetMapping("/{id}")
+    @PatchMapping("/{id}")
     public Linguagem voteLinguagem(@PathVariable String id) {
         var linguagem = repository.getById(id)
                 .orElseThrow(() -> new IllegalArgumentException("Id not found - " + id));

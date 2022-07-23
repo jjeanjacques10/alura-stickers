@@ -107,6 +107,10 @@ Estou utilizando variáveis de ambiente para a senha e também para o nome de us
 - PUT <https://linguagens-alura.herokuapp.com/linguagens/{id}>
 - DELETE <https://linguagens-alura.herokuapp.com/linguagens/{id}>
 
+### Votar na melhor linguagem de programação
+
+- PATCH <https://linguagens-alura.herokuapp.com/vote/{id}>
+
 Exemplo de retorno:
 
 ``` json
