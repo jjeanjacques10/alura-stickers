@@ -111,6 +111,12 @@ Estou utilizando variáveis de ambiente para a senha e também para o nome de us
 
 - PATCH <https://linguagens-alura.herokuapp.com/vote/{id}>
 
+### Download de sticker
+
+Download de sticker das linguagens de programação.
+
+- GET <https://linguagens-alura.herokuapp.com/stickers/{id}>
+
 Exemplo de retorno:
 
 ``` json
@@ -135,7 +141,6 @@ Exemplo de retorno:
 ```
 
 Para quem criou o projeto como eu, onde a API ficou em uma pasta que não é a raiz do diretório, pode ser um pouco complicado publicar no Heroku. Segue artigo para resolver este problema: <https://jjeanjacques10.medium.com/spring-boot-microservices-monorepo-heroku-6dd8e177da91>
-
 
 ---
 Developed by [@jjeanjacques10](https://twitter.com/jjeanjacques10)
