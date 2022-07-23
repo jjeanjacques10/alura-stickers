@@ -13,7 +13,7 @@ public class App {
         // String url =
         // "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY&start_date=2021-10-07&end_date=2021-10-11";
         // String url = "https://mocki.io/v1/9a7c1ca9-29b4-4eb3-8306-1adb9d159060";
-        String url = "http://localhost:8080/linguagems";
+        String url = "https://linguagens-alura.herokuapp.com/linguagens";
 
         var http = new HttpClientSticker();
         String json = http.searchData(url);

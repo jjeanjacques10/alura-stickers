@@ -12,6 +12,14 @@ Site da Imersão: <https://www.alura.com.br/imersao-java>
   - `stikcersrefactored`: Código fonte do App que gera os stickers refatorado na aula 3
 - `linguagensapi`: Projeto Spring Boot para listar as linguagens de programação
 
+## Tecnologias utilizadas
+
+- [Java 17](https://openjdk.java.net/install/index.html)
+- [Spring Boot](https://spring.io/projects/spring-boot)
+- [Spring Data MongoDB](https://spring.io/projects/spring-data-mongodb)
+- [Heroku](https://www.heroku.com/)
+- [MongoDB](https://www.mongodb.com/)
+
 ## Aula 1 - IMDb API
 
 Site de consulta de filmes e séries. Estamos utilizando a API pública deles para obter os dados.
@@ -85,15 +93,19 @@ public record Content(String title, String imageUrl) {}
 Criando a API utilizando [Spring](https://spring.io/) e [MongoDB](https://cloud.mongodb.com/). Para realizar a conexão com o banco de dados MongoDb é necessário utilizar a String de conexão abaixo.
 
 ``` application.properties
-spring.data.mongodb.uri=mongodb+srv://<user>:<password>@cluster0.ha1bu.mongodb.net/?retryWrites=true&w=majority
+spring.data.mongodb.uri=mongodb+srv://${USER_MONGODB:jean}:${PASSWORD_MONGODB:password}@cluster0.ha1bu.mongodb.net/?retryWrites=true&w=majority
 spring.data.mongodb.database=aluradb
 ```
 
-- GET <http://localhost:8080/linguagens>
-- POST <http://localhost:8080/linguagens>
-- GET <http://localhost:8080/linguagens/{id}>
-- PUT <http://localhost:8080/linguagens/{id}>
-- DELETE <http://localhost:8080/linguagens/{id}>
+Estou utilizando variáveis de ambiente para a senha e também para o nome de usuário. Estes valores são inseridos no Heroku para serem injetanos no deploy do projeto.
+
+### Endpoints linguagens de programação
+
+- GET <https://linguagens-alura.herokuapp.com/linguagens>
+- POST <https://linguagens-alura.herokuapp.com/linguagens>
+- GET <https://linguagens-alura.herokuapp.com/linguagens/{id}>
+- PUT <https://linguagens-alura.herokuapp.com/linguagens/{id}>
+- DELETE <https://linguagens-alura.herokuapp.com/linguagens/{id}>
 
 Exemplo de retorno:
 
