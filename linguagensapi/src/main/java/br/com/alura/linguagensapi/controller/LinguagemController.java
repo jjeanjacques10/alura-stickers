@@ -3,6 +3,9 @@ package br.com.alura.linguagensapi.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.data.domain.Sort.Order;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,7 +27,8 @@ public class LinguagemController {
 
     @GetMapping
     public List<Linguagem> findAll() {
-        return repository.findAll();
+        Sort sortBy = Sort.by(Order.desc("ranking"));
+        return repository.findAll(sortBy);
     }
 
     @GetMapping("/{id}")
