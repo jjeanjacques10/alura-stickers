@@ -134,5 +134,8 @@ Exemplo de retorno:
 }
 ```
 
+Para quem criou o projeto como eu, onde a API ficou em uma pasta que não é a raiz do diretório, pode ser um pouco complicado publicar no Heroku. Segue artigo para resolver este problema: <https://jjeanjacques10.medium.com/spring-boot-microservices-monorepo-heroku-6dd8e177da91>
+
+
 ---
 Developed by [@jjeanjacques10](https://twitter.com/jjeanjacques10)
