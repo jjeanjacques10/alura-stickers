@@ -1,6 +1,6 @@
 ## Imersão Java Alura
 
-Projeto da Imersão Java da Alura.
+Projeto da semana Imersão Java da Alura.
 
 Site da Imersão: <https://www.alura.com.br/imersao-java>
 
@@ -10,6 +10,7 @@ Site da Imersão: <https://www.alura.com.br/imersao-java>
   - `movies`: Código fonte do App que chama o IMDb API
   - `stickers`: Código fonte do App que gera os stickers
   - `stikcersrefactored`: Código fonte do App que gera os stickers refatorado na aula 3
+- `linguagensapi`: Projeto Spring Boot para listar as linguagens de programação
 
 ## Aula 1 - IMDb API
 
@@ -77,6 +78,44 @@ Nova versão como um [record](https://www.guiadojava.com.br/2021/04/java-records
 
 ``` java
 public record Content(String title, String imageUrl) {}
+```
+
+## Aula 4
+
+Criando a API utilizando [Spring](https://spring.io/) e [MongoDB](https://cloud.mongodb.com/). Para realizar a conexão com o banco de dados MongoDb é necessário utilizar a String de conexão abaixo.
+
+``` application.properties
+spring.data.mongodb.uri=mongodb+srv://<user>:<password>@cluster0.ha1bu.mongodb.net/?retryWrites=true&w=majority
+spring.data.mongodb.database=aluradb
+```
+
+- GET <http://localhost:8080/linguagens>
+- POST <http://localhost:8080/linguagens>
+- GET <http://localhost:8080/linguagens/{id}>
+- PUT <http://localhost:8080/linguagens/{id}>
+- DELETE <http://localhost:8080/linguagens/{id}>
+
+Exemplo de retorno:
+
+``` json
+{
+    "id": "62d9fb6ecf2973da6f041737",
+    "title": "Java",
+    "image": "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/java/java_128x128.png",
+    "ranking": 1
+},
+{
+    "id": "62d9fb9dcf2973da6f041738",
+    "title": "Python",
+    "image": "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/python/python_128x128.png",
+    "ranking": 2
+},
+{
+    "id": "62d9fbb5cf2973da6f041739",
+    "title": "JavaScript",
+    "image": "https://raw.githubusercontent.com/abrahamcalf/programming-languages-logos/master/src/javascript/javascript_128x128.png",
+    "ranking": 3
+}
 ```
 
 ---
